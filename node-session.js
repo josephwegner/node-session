@@ -56,8 +56,7 @@ function newSession(res) {
     
     var session = { //Session literal object
                     SESSID: SESSID,
-                    expires: dt,
-                    page: 1
+                    expires: dt
                     };
     sessions[SESSID] = session;//Store it for future requests
     
