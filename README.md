@@ -6,6 +6,7 @@ I want to make it very clear up front that node-session is NOT fool-proof.  I ca
   
 ##Use
 node-session is stupid simple to use.  As long as you've got a HTTP server running, it's really just two lines to grab the current session.  
+
     var session = require('./node-session.js');
     
     //Start your http server however you like. Imagine the code below is inside of your server loop
