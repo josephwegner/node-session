@@ -1,8 +1,8 @@
 var http = require('http');
 var session = require('./node-session.js');
 
-var host = "0.0.0.0";
-var port = process.env.C9_PORT
+var host = "0.0.0.0"; //Change these values to match your own test server
+var port = process.env.C9_PORT;//Unfortunately, Cloud9IDE forces these values
 
 http.createServer(function (req, res) {
 
