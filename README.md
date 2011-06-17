@@ -19,6 +19,7 @@ As you can see, it's very simple.  As expected, the session variables you create
 ##Testing
 I've provided a test file that you can use to make sure that node-session really is working.  You'll have to make some quick edits, because of Cloud9IDE's HTTP server requirements.
 Change these two lines to reflect your actual server setup.
+
     var host = "0.0.0.0"; //Change these values to match your own test server
     var port = process.env.C9_PORT;//Unfortunately, Cloud9IDE forces these values
 
@@ -26,8 +27,8 @@ Then load up your HTTP server.  You should get a message telling you to reload t
 
 ##Todo
 
-*Allow different session time-out lengths.
+* Allow different session time-out lengths.
 
 ##Contributors
 
-*Joe Wegner (@Joe_Wegner) ~ Blog at: http://www.wegnerdesign.com
+* Joe Wegner (@Joe_Wegner) ~ Blog at: http://www.wegnerdesign.com
