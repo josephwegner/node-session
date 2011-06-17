@@ -6,28 +6,28 @@ I want to make it very clear up front that node-session is NOT fool-proof.  I ca
   
 ##Use
 node-session is stupid simple to use.  As long as you've got a HTTP server running, it's really just two lines to grab the current session.  
-`var session = require('./node-session.js');
+    var session = require('./node-session.js');
+    
+    //Start your http server however you like. Imagine the code below is inside of your server loop
+    
+    var yourSession = session.start(response, request); //response and request are the res/req variables passed from http.createServer()
+    
+    yourSession.testValue = "A session variable" //Create a session variable called testValue
 
-//Start your http server however you like. Imagine the code below is inside of your server loop
-
-var yourSession = session.start(response, request); //response and request are the res/req variables passed from http.createServer()
-
-yourSession.testValue = "A session variable" //Create a session variable called testValue
-`  
 As you can see, it's very simple.  As expected, the session variables you created (like testValue) will be available the next time the user loads your page.  Sessions timeout after 30 minutes by default.
 
 ##Testing
 I've provided a test file that you can use to make sure that node-session really is working.  You'll have to make some quick edits, because of Cloud9IDE's HTTP server requirements.
 Change these two lines to reflect your actual server setup.
-`var host = "0.0.0.0"; //Change these values to match your own test server
-var port = process.env.C9_PORT;//Unfortunately, Cloud9IDE forces these values`
+    var host = "0.0.0.0"; //Change these values to match your own test server
+    var port = process.env.C9_PORT;//Unfortunately, Cloud9IDE forces these values
 
 Then load up your HTTP server.  You should get a message telling you to reload the page.  Once you reload it you should see that the session variable testValue has been sucessfully set.
 
 ##Todo
 
--Allow different session time-out lengths.
+*Allow different session time-out lengths.
 
 ##Contributors
 
--Joe Wegner (@Joe_Wegner) ~ Blog at: http://www.wegnerdesign.com
+*Joe Wegner (@Joe_Wegner) ~ Blog at: http://www.wegnerdesign.com
